@@ -6,12 +6,12 @@ after=''
 
 for i in $list
 do
-    date -u --date=@$i '+%Y年%m月%d日：没有' >> ./README.md
-    echo >> ./README.md
+    date -u --date=@$i '+%Y年%m月%d日：没有' >> ./log.md
+    echo >> ./log.md
 
     echo $i > ./begin
 
-    git add ./README.md
+    git add ./log.md
     git add ./begin
     git commit --date=$i --message='add'
 done
